@@ -21,10 +21,24 @@ class GameScene: SKScene {
     var sushiBasePiece: SushiPiece!
     var character: Character!
     var sushiTower: [SushiPiece] = []
-    
     var gameState: GameState = .Title
-    
     var playButton: MSButtonNode!
+    
+    var scoreLabel: SKLabelNode!
+    var score: Int = 0 {
+        didSet {
+            scoreLabel.text = String(score)
+        }
+    }
+    
+    var healthBar: SKSpriteNode!
+    var health: CGFloat = 1.0 {
+        didSet {
+            healthBar.xScale = health
+            
+            if(health > 1.0) { health = 1.0 }
+        }
+    }
     
     
     override func didMoveToView(view: SKView) {
@@ -32,6 +46,8 @@ class GameScene: SKScene {
         sushiBasePiece.connectChopsticks()
         
         character = self.childNodeWithName("character") as! Character
+        healthBar = self.childNodeWithName("healthBar") as! SKSpriteNode
+        scoreLabel = self.childNodeWithName("scoreLabel") as! SKLabelNode
         
         playButton = self.childNodeWithName("playButton") as! MSButtonNode
         
@@ -75,6 +91,9 @@ class GameScene: SKScene {
             sushiTower.removeFirst()
             firstPiece.flip(character.side)
             
+            health += 0.1
+            score += 1
+            
             addRandomPieces(1)
             
             for node:SushiPiece in sushiTower {
@@ -90,7 +109,11 @@ class GameScene: SKScene {
     }
    
     override func update(currentTime: CFTimeInterval) {
-
+        if(gameState != .Playing) {return}
+        
+        health -= 0.01
+        
+        if(health <= 0) {gameOver()}
     }
     
     /* Uses the addSushiPiece method to generate a total number of random sushi pieces.

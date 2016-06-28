@@ -142,8 +142,8 @@
 			children = (
 				E7462CC81D22D97F003CCCAD /* AppDelegate.swift */,
 				E7462CCA1D22D97F003CCCAD /* GameScene.sks */,
-				E7462D3D1D22DF20003CCCAD /* Character.swift */,
 				E7462CCC1D22D97F003CCCAD /* GameScene.swift */,
+				E7462D3D1D22DF20003CCCAD /* Character.swift */,
 				E7462D3B1D22DC3F003CCCAD /* SushiPiece.swift */,
 				E7462CCE1D22D97F003CCCAD /* GameViewController.swift */,
 				E7462CD01D22D97F003CCCAD /* Main.storyboard */,
