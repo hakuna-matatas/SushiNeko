@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E7462CC91D22D97F003CCCAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462CC81D22D97F003CCCAD /* AppDelegate.swift */; };
+		E7462CCB1D22D97F003CCCAD /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E7462CCA1D22D97F003CCCAD /* GameScene.sks */; };
+		E7462CCD1D22D97F003CCCAD /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462CCC1D22D97F003CCCAD /* GameScene.swift */; };
+		E7462CCF1D22D97F003CCCAD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462CCE1D22D97F003CCCAD /* GameViewController.swift */; };
+		E7462CD21D22D97F003CCCAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7462CD01D22D97F003CCCAD /* Main.storyboard */; };
+		E7462CD41D22D97F003CCCAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7462CD31D22D97F003CCCAD /* Assets.xcassets */; };
+		E7462CD71D22D97F003CCCAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7462CD51D22D97F003CCCAD /* LaunchScreen.storyboard */; };
+		E7462CE21D22D97F003CCCAD /* SushiNekoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462CE11D22D97F003CCCAD /* SushiNekoTests.swift */; };
+		E7462CED1D22D97F003CCCAD /* SushiNekoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462CEC1D22D97F003CCCAD /* SushiNekoUITests.swift */; };
+		E7462CFB1D22D9AB003CCCAD /* assets.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E7462CFA1D22D9AB003CCCAD /* assets.atlas */; };
+		E7462CFE1D22D9C6003CCCAD /* sfx_swipe.caf in Resources */ = {isa = PBXBuildFile; fileRef = E7462CFD1D22D9C6003CCCAD /* sfx_swipe.caf */; };
+		E7462D2D1D22DBD9003CCCAD /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D1E1D22DBD9003CCCAD /* MSButtonNode.swift */; };
+		E7462D2E1D22DBD9003CCCAD /* MSReferenceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D1F1D22DBD9003CCCAD /* MSReferenceNode.swift */; };
+		E7462D2F1D22DBD9003CCCAD /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D211D22DBD9003CCCAD /* CGFloat+Extensions.swift */; };
+		E7462D301D22DBD9003CCCAD /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D221D22DBD9003CCCAD /* CGPoint+Extensions.swift */; };
+		E7462D311D22DBD9003CCCAD /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D231D22DBD9003CCCAD /* CGVector+Extensions.swift */; };
+		E7462D321D22DBD9003CCCAD /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D241D22DBD9003CCCAD /* Int+Extensions.swift */; };
+		E7462D331D22DBD9003CCCAD /* SKAction+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D251D22DBD9003CCCAD /* SKAction+Extensions.swift */; };
+		E7462D341D22DBD9003CCCAD /* SKAction+SpecialEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D261D22DBD9003CCCAD /* SKAction+SpecialEffects.swift */; };
+		E7462D351D22DBD9003CCCAD /* SKColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D271D22DBD9003CCCAD /* SKColor+Extensions.swift */; };
+		E7462D361D22DBD9003CCCAD /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D281D22DBD9003CCCAD /* SKNode+Extensions.swift */; };
+		E7462D371D22DBD9003CCCAD /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D291D22DBD9003CCCAD /* SKTAudio.swift */; };
+		E7462D381D22DBD9003CCCAD /* SKTEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D2A1D22DBD9003CCCAD /* SKTEffects.swift */; };
+		E7462D391D22DBD9003CCCAD /* SKTTimingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D2B1D22DBD9003CCCAD /* SKTTimingFunctions.swift */; };
+		E7462D3A1D22DBD9003CCCAD /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D2C1D22DBD9003CCCAD /* Vector3.swift */; };
+		E7462D3C1D22DC3F003CCCAD /* SushiPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D3B1D22DC3F003CCCAD /* SushiPiece.swift */; };
+		E7462D3E1D22DF20003CCCAD /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D3D1D22DF20003CCCAD /* Character.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7462CDE1D22D97F003CCCAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7462CBD1D22D97F003CCCAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7462CC41D22D97F003CCCAD;
+			remoteInfo = SushiNeko;
+		};
+		E7462CE91D22D97F003CCCAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7462CBD1D22D97F003CCCAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7462CC41D22D97F003CCCAD;
+			remoteInfo = SushiNeko;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E7462CC51D22D97F003CCCAD /* SushiNeko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SushiNeko.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7462CC81D22D97F003CCCAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E7462CCA1D22D97F003CCCAD /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		E7462CCC1D22D97F003CCCAD /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		E7462CCE1D22D97F003CCCAD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E7462CD11D22D97F003CCCAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7462CD31D22D97F003CCCAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7462CD61D22D97F003CCCAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E7462CD81D22D97F003CCCAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7462CDD1D22D97F003CCCAD /* SushiNekoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SushiNekoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7462CE11D22D97F003CCCAD /* SushiNekoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiNekoTests.swift; sourceTree = "<group>"; };
+		E7462CE31D22D97F003CCCAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7462CE81D22D97F003CCCAD /* SushiNekoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SushiNekoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7462CEC1D22D97F003CCCAD /* SushiNekoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiNekoUITests.swift; sourceTree = "<group>"; };
+		E7462CEE1D22D97F003CCCAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7462CFA1D22D9AB003CCCAD /* assets.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = assets.atlas; sourceTree = "<group>"; };
+		E7462CFD1D22D9C6003CCCAD /* sfx_swipe.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_swipe.caf; sourceTree = "<group>"; };
+		E7462D1E1D22DBD9003CCCAD /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
+		E7462D1F1D22DBD9003CCCAD /* MSReferenceNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSReferenceNode.swift; sourceTree = "<group>"; };
+		E7462D211D22DBD9003CCCAD /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		E7462D221D22DBD9003CCCAD /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		E7462D231D22DBD9003CCCAD /* CGVector+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+Extensions.swift"; sourceTree = "<group>"; };
+		E7462D241D22DBD9003CCCAD /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		E7462D251D22DBD9003CCCAD /* SKAction+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+Extensions.swift"; sourceTree = "<group>"; };
+		E7462D261D22DBD9003CCCAD /* SKAction+SpecialEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+SpecialEffects.swift"; sourceTree = "<group>"; };
+		E7462D271D22DBD9003CCCAD /* SKColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+Extensions.swift"; sourceTree = "<group>"; };
+		E7462D281D22DBD9003CCCAD /* SKNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+Extensions.swift"; sourceTree = "<group>"; };
+		E7462D291D22DBD9003CCCAD /* SKTAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
+		E7462D2A1D22DBD9003CCCAD /* SKTEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTEffects.swift; sourceTree = "<group>"; };
+		E7462D2B1D22DBD9003CCCAD /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
+		E7462D2C1D22DBD9003CCCAD /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
+		E7462D3B1D22DC3F003CCCAD /* SushiPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SushiPiece.swift; sourceTree = "<group>"; };
+		E7462D3D1D22DF20003CCCAD /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7462CC21D22D97F003CCCAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7462CDA1D22D97F003CCCAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7462CE51D22D97F003CCCAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E7462CBC1D22D97F003CCCAD = {
+			isa = PBXGroup;
+			children = (
+				E7462CC71D22D97F003CCCAD /* SushiNeko */,
+				E7462CE01D22D97F003CCCAD /* SushiNekoTests */,
+				E7462CEB1D22D97F003CCCAD /* SushiNekoUITests */,
+				E7462CC61D22D97F003CCCAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E7462CC61D22D97F003CCCAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7462CC51D22D97F003CCCAD /* SushiNeko.app */,
+				E7462CDD1D22D97F003CCCAD /* SushiNekoTests.xctest */,
+				E7462CE81D22D97F003CCCAD /* SushiNekoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7462CC71D22D97F003CCCAD /* SushiNeko */ = {
+			isa = PBXGroup;
+			children = (
+				E7462CC81D22D97F003CCCAD /* AppDelegate.swift */,
+				E7462CCA1D22D97F003CCCAD /* GameScene.sks */,
+				E7462D3D1D22DF20003CCCAD /* Character.swift */,
+				E7462CCC1D22D97F003CCCAD /* GameScene.swift */,
+				E7462D3B1D22DC3F003CCCAD /* SushiPiece.swift */,
+				E7462CCE1D22D97F003CCCAD /* GameViewController.swift */,
+				E7462CD01D22D97F003CCCAD /* Main.storyboard */,
+				E7462CD31D22D97F003CCCAD /* Assets.xcassets */,
+				E7462CFC1D22D9C6003CCCAD /* SFX */,
+				E7462CFA1D22D9AB003CCCAD /* assets.atlas */,
+				E7462D1D1D22DBD9003CCCAD /* Utils */,
+				E7462CD51D22D97F003CCCAD /* LaunchScreen.storyboard */,
+				E7462CD81D22D97F003CCCAD /* Info.plist */,
+			);
+			path = SushiNeko;
+			sourceTree = "<group>";
+		};
+		E7462CE01D22D97F003CCCAD /* SushiNekoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7462CE11D22D97F003CCCAD /* SushiNekoTests.swift */,
+				E7462CE31D22D97F003CCCAD /* Info.plist */,
+			);
+			path = SushiNekoTests;
+			sourceTree = "<group>";
+		};
+		E7462CEB1D22D97F003CCCAD /* SushiNekoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E7462CEC1D22D97F003CCCAD /* SushiNekoUITests.swift */,
+				E7462CEE1D22D97F003CCCAD /* Info.plist */,
+			);
+			path = SushiNekoUITests;
+			sourceTree = "<group>";
+		};
+		E7462CFC1D22D9C6003CCCAD /* SFX */ = {
+			isa = PBXGroup;
+			children = (
+				E7462CFD1D22D9C6003CCCAD /* sfx_swipe.caf */,
+			);
+			path = SFX;
+			sourceTree = "<group>";
+		};
+		E7462D1D1D22DBD9003CCCAD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E7462D1E1D22DBD9003CCCAD /* MSButtonNode.swift */,
+				E7462D1F1D22DBD9003CCCAD /* MSReferenceNode.swift */,
+				E7462D201D22DBD9003CCCAD /* SKTUtils */,
+			);
+			name = Utils;
+			path = ../Utils;
+			sourceTree = "<group>";
+		};
+		E7462D201D22DBD9003CCCAD /* SKTUtils */ = {
+			isa = PBXGroup;
+			children = (
+				E7462D211D22DBD9003CCCAD /* CGFloat+Extensions.swift */,
+				E7462D221D22DBD9003CCCAD /* CGPoint+Extensions.swift */,
+				E7462D231D22DBD9003CCCAD /* CGVector+Extensions.swift */,
+				E7462D241D22DBD9003CCCAD /* Int+Extensions.swift */,
+				E7462D251D22DBD9003CCCAD /* SKAction+Extensions.swift */,
+				E7462D261D22DBD9003CCCAD /* SKAction+SpecialEffects.swift */,
+				E7462D271D22DBD9003CCCAD /* SKColor+Extensions.swift */,
+				E7462D281D22DBD9003CCCAD /* SKNode+Extensions.swift */,
+				E7462D291D22DBD9003CCCAD /* SKTAudio.swift */,
+				E7462D2A1D22DBD9003CCCAD /* SKTEffects.swift */,
+				E7462D2B1D22DBD9003CCCAD /* SKTTimingFunctions.swift */,
+				E7462D2C1D22DBD9003CCCAD /* Vector3.swift */,
+			);
+			path = SKTUtils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7462CC41D22D97F003CCCAD /* SushiNeko */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7462CF11D22D97F003CCCAD /* Build configuration list for PBXNativeTarget "SushiNeko" */;
+			buildPhases = (
+				E7462CC11D22D97F003CCCAD /* Sources */,
+				E7462CC21D22D97F003CCCAD /* Frameworks */,
+				E7462CC31D22D97F003CCCAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SushiNeko;
+			productName = SushiNeko;
+			productReference = E7462CC51D22D97F003CCCAD /* SushiNeko.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7462CDC1D22D97F003CCCAD /* SushiNekoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7462CF41D22D97F003CCCAD /* Build configuration list for PBXNativeTarget "SushiNekoTests" */;
+			buildPhases = (
+				E7462CD91D22D97F003CCCAD /* Sources */,
+				E7462CDA1D22D97F003CCCAD /* Frameworks */,
+				E7462CDB1D22D97F003CCCAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7462CDF1D22D97F003CCCAD /* PBXTargetDependency */,
+			);
+			name = SushiNekoTests;
+			productName = SushiNekoTests;
+			productReference = E7462CDD1D22D97F003CCCAD /* SushiNekoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E7462CE71D22D97F003CCCAD /* SushiNekoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7462CF71D22D97F003CCCAD /* Build configuration list for PBXNativeTarget "SushiNekoUITests" */;
+			buildPhases = (
+				E7462CE41D22D97F003CCCAD /* Sources */,
+				E7462CE51D22D97F003CCCAD /* Frameworks */,
+				E7462CE61D22D97F003CCCAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7462CEA1D22D97F003CCCAD /* PBXTargetDependency */,
+			);
+			name = SushiNekoUITests;
+			productName = SushiNekoUITests;
+			productReference = E7462CE81D22D97F003CCCAD /* SushiNekoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7462CBD1D22D97F003CCCAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Alan Gao";
+				TargetAttributes = {
+					E7462CC41D22D97F003CCCAD = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = CRQLR7R8J3;
+					};
+					E7462CDC1D22D97F003CCCAD = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E7462CC41D22D97F003CCCAD;
+					};
+					E7462CE71D22D97F003CCCAD = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E7462CC41D22D97F003CCCAD;
+					};
+				};
+			};
+			buildConfigurationList = E7462CC01D22D97F003CCCAD /* Build configuration list for PBXProject "SushiNeko" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7462CBC1D22D97F003CCCAD;
+			productRefGroup = E7462CC61D22D97F003CCCAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7462CC41D22D97F003CCCAD /* SushiNeko */,
+				E7462CDC1D22D97F003CCCAD /* SushiNekoTests */,
+				E7462CE71D22D97F003CCCAD /* SushiNekoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7462CC31D22D97F003CCCAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7462CCB1D22D97F003CCCAD /* GameScene.sks in Resources */,
+				E7462CFE1D22D9C6003CCCAD /* sfx_swipe.caf in Resources */,
+				E7462CD71D22D97F003CCCAD /* LaunchScreen.storyboard in Resources */,
+				E7462CD41D22D97F003CCCAD /* Assets.xcassets in Resources */,
+				E7462CFB1D22D9AB003CCCAD /* assets.atlas in Resources */,
+				E7462CD21D22D97F003CCCAD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7462CDB1D22D97F003CCCAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7462CE61D22D97F003CCCAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7462CC11D22D97F003CCCAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7462D301D22DBD9003CCCAD /* CGPoint+Extensions.swift in Sources */,
+				E7462D381D22DBD9003CCCAD /* SKTEffects.swift in Sources */,
+				E7462D331D22DBD9003CCCAD /* SKAction+Extensions.swift in Sources */,
+				E7462CCD1D22D97F003CCCAD /* GameScene.swift in Sources */,
+				E7462D361D22DBD9003CCCAD /* SKNode+Extensions.swift in Sources */,
+				E7462CCF1D22D97F003CCCAD /* GameViewController.swift in Sources */,
+				E7462D391D22DBD9003CCCAD /* SKTTimingFunctions.swift in Sources */,
+				E7462D341D22DBD9003CCCAD /* SKAction+SpecialEffects.swift in Sources */,
+				E7462D321D22DBD9003CCCAD /* Int+Extensions.swift in Sources */,
+				E7462D3A1D22DBD9003CCCAD /* Vector3.swift in Sources */,
+				E7462CC91D22D97F003CCCAD /* AppDelegate.swift in Sources */,
+				E7462D351D22DBD9003CCCAD /* SKColor+Extensions.swift in Sources */,
+				E7462D311D22DBD9003CCCAD /* CGVector+Extensions.swift in Sources */,
+				E7462D2E1D22DBD9003CCCAD /* MSReferenceNode.swift in Sources */,
+				E7462D371D22DBD9003CCCAD /* SKTAudio.swift in Sources */,
+				E7462D3C1D22DC3F003CCCAD /* SushiPiece.swift in Sources */,
+				E7462D2F1D22DBD9003CCCAD /* CGFloat+Extensions.swift in Sources */,
+				E7462D2D1D22DBD9003CCCAD /* MSButtonNode.swift in Sources */,
+				E7462D3E1D22DF20003CCCAD /* Character.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7462CD91D22D97F003CCCAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7462CE21D22D97F003CCCAD /* SushiNekoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7462CE41D22D97F003CCCAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7462CED1D22D97F003CCCAD /* SushiNekoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7462CDF1D22D97F003CCCAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7462CC41D22D97F003CCCAD /* SushiNeko */;
+			targetProxy = E7462CDE1D22D97F003CCCAD /* PBXContainerItemProxy */;
+		};
+		E7462CEA1D22D97F003CCCAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7462CC41D22D97F003CCCAD /* SushiNeko */;
+			targetProxy = E7462CE91D22D97F003CCCAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E7462CD01D22D97F003CCCAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7462CD11D22D97F003CCCAD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E7462CD51D22D97F003CCCAD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7462CD61D22D97F003CCCAD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E7462CEF1D22D97F003CCCAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7462CF01D22D97F003CCCAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7462CF21D22D97F003CCCAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = SushiNeko/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlanGao.SushiNeko;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		E7462CF31D22D97F003CCCAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = SushiNeko/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlanGao.SushiNeko;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		E7462CF51D22D97F003CCCAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = SushiNekoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlanGao.SushiNekoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SushiNeko.app/SushiNeko";
+			};
+			name = Debug;
+		};
+		E7462CF61D22D97F003CCCAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SushiNekoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlanGao.SushiNekoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SushiNeko.app/SushiNeko";
+			};
+			name = Release;
+		};
+		E7462CF81D22D97F003CCCAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = SushiNekoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlanGao.SushiNekoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SushiNeko;
+			};
+			name = Debug;
+		};
+		E7462CF91D22D97F003CCCAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SushiNekoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlanGao.SushiNekoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SushiNeko;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7462CC01D22D97F003CCCAD /* Build configuration list for PBXProject "SushiNeko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7462CEF1D22D97F003CCCAD /* Debug */,
+				E7462CF01D22D97F003CCCAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7462CF11D22D97F003CCCAD /* Build configuration list for PBXNativeTarget "SushiNeko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7462CF21D22D97F003CCCAD /* Debug */,
+				E7462CF31D22D97F003CCCAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E7462CF41D22D97F003CCCAD /* Build configuration list for PBXNativeTarget "SushiNekoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7462CF51D22D97F003CCCAD /* Debug */,
+				E7462CF61D22D97F003CCCAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E7462CF71D22D97F003CCCAD /* Build configuration list for PBXNativeTarget "SushiNekoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7462CF81D22D97F003CCCAD /* Debug */,
+				E7462CF91D22D97F003CCCAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7462CBD1D22D97F003CCCAD /* Project object */;
+}
