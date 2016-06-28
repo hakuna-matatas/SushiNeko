@@ -13,11 +13,18 @@ enum Side {
     case Left, Right, None
 }
 
+enum GameState {
+    case Title, Ready, Playing, GameOver
+}
+
 class GameScene: SKScene {
     var sushiBasePiece: SushiPiece!
     var character: Character!
-    
     var sushiTower: [SushiPiece] = []
+    
+    var gameState: GameState = .Title
+    
+    var playButton: MSButtonNode!
     
     
     override func didMoveToView(view: SKView) {
@@ -26,12 +33,24 @@ class GameScene: SKScene {
         
         character = self.childNodeWithName("character") as! Character
         
+        playButton = self.childNodeWithName("playButton") as! MSButtonNode
+        
+        playButton.selectedHandler = {
+            self.gameState = .Ready
+        }
+        
         addSushiPiece(.None)
         addSushiPiece(.None)
         addRandomPieces(10)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if(gameState == .Title || gameState == .GameOver) { return }
+        
+        if(gameState == .Ready) {
+            gameState = .Playing
+        }
+
         for touch in touches {
             let location = touch.locationInNode(self)
             
@@ -42,10 +61,19 @@ class GameScene: SKScene {
                 character.side = .Left
             }
             
-            let firstPiece = sushiTower.first
+            let firstPiece = sushiTower.first as SushiPiece!
+            
+            if(character.side == firstPiece.side) {
+                for node:SushiPiece in sushiTower {
+                    node.runAction(SKAction.moveBy(CGVector(dx: 0, dy: -55), duration: 0.10))
+                }
+                
+                gameOver()
+                return
+            }
             
             sushiTower.removeFirst()
-            firstPiece?.flip(character.side)
+            firstPiece.flip(character.side)
             
             addRandomPieces(1)
             
@@ -94,6 +122,23 @@ class GameScene: SKScene {
         }
     }
     
+    
+    func gameOver() {
+        gameState = .GameOver
+        
+        for node:SushiPiece in sushiTower {
+            node.runAction(SKAction.colorizeWithColor(UIColor.redColor(), colorBlendFactor: 1.0, duration: 0.50))
+        }
+        
+        character.runAction(SKAction.colorizeWithColor(UIColor.redColor(), colorBlendFactor: 1.0, duration: 0.50))
+        
+        playButton.selectedHandler = {
+            let skView = self.view as SKView!
+            let scene = GameScene(fileNamed: "GameScene") as GameScene!
+            scene.scaleMode = .AspectFill
+            skView.presentScene(scene)
+        }
+    }
     
     /* Adds sushi pieces to both the screen and the internal array
        storing all the pieces in the sushi tower */
