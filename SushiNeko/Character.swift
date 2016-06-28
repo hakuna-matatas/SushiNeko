@@ -22,6 +22,9 @@ class Character: SKSpriteNode {
             case .None:
                 break;
             }
+            
+            let punch = SKAction(named: "Punch")
+            runAction(punch!)
         }
     }
     

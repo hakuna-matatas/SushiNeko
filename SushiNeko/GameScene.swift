@@ -26,26 +26,77 @@ class GameScene: SKScene {
         
         character = self.childNodeWithName("character") as! Character
         
-        
-        self.addSushiPiece(.None)
-        self.addSushiPiece(.Right)
+        addSushiPiece(.None)
+        addSushiPiece(.None)
+        addRandomPieces(10)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-
+        for touch in touches {
+            let location = touch.locationInNode(self)
+            
+            if(location.x > (self.size.width / 2)) {
+                character.side = .Right
+            }
+            else {
+                character.side = .Left
+            }
+            
+            let firstPiece = sushiTower.first
+            
+            sushiTower.removeFirst()
+            firstPiece?.flip(character.side)
+            
+            addRandomPieces(1)
+            
+            for node:SushiPiece in sushiTower {
+                /* Animate the sushi piece to go downwards */
+                let shiftDownwards = SKAction.moveBy(CGVector(dx: 0, dy: -55), duration: 0.10)
+                node.runAction(shiftDownwards)
+                
+                /* We don't want sushi pieces to block UI elements */
+                node.zPosition -= 1
+            }
+            
+        }
     }
    
     override func update(currentTime: CFTimeInterval) {
 
     }
     
-//    func addRandomPieces(total: Int) {
-//        while(total > 0) {
-//            
-//            
-//        }
-//    }
+    /* Uses the addSushiPiece method to generate a total number of random sushi pieces.
+       There is a 45% EACH of generating a left or right sushi piece, and a 10% of generating
+       a sushi piece with no branch. Code also prevents an impossible scenario from occuring (see 
+       code for details) */
+    func addRandomPieces(total: Int) {
+        for _ in 1...total {
+            let lastPiece = sushiTower.last as SushiPiece!
+            
+            if lastPiece.side != .None {
+                /* If a sushi piece with a left branch is immediately followed by a sushi piece
+                   with a right branch, then the player is faced with an impossible situation. */
+                addSushiPiece(.None)
+            }
+            else {
+                let rand = CGFloat.random(min: 0, max: 1.0)
+                
+                if(rand < 0.45) {
+                    addSushiPiece(.Left)
+                }
+                else if(rand < 0.9) {
+                    addSushiPiece(.Right)
+                }
+                else {
+                    addSushiPiece(.None)
+                }
+            }
+        }
+    }
     
+    
+    /* Adds sushi pieces to both the screen and the internal array
+       storing all the pieces in the sushi tower */
     func addSushiPiece(side: Side) {
         let newPiece = sushiBasePiece.copy() as! SushiPiece
         newPiece.connectChopsticks()

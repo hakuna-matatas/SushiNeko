@@ -34,6 +34,7 @@
 		E7462D3A1D22DBD9003CCCAD /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D2C1D22DBD9003CCCAD /* Vector3.swift */; };
 		E7462D3C1D22DC3F003CCCAD /* SushiPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D3B1D22DC3F003CCCAD /* SushiPiece.swift */; };
 		E7462D3E1D22DF20003CCCAD /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7462D3D1D22DF20003CCCAD /* Character.swift */; };
+		E7462D421D22E98B003CCCAD /* AnimationActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E7462D411D22E98B003CCCAD /* AnimationActions.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		E7462D2C1D22DBD9003CCCAD /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		E7462D3B1D22DC3F003CCCAD /* SushiPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SushiPiece.swift; sourceTree = "<group>"; };
 		E7462D3D1D22DF20003CCCAD /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		E7462D411D22E98B003CCCAD /* AnimationActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = AnimationActions.sks; path = SushiNeko/AnimationActions.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		E7462CBC1D22D97F003CCCAD = {
 			isa = PBXGroup;
 			children = (
+				E7462D411D22E98B003CCCAD /* AnimationActions.sks */,
 				E7462CC71D22D97F003CCCAD /* SushiNeko */,
 				E7462CE01D22D97F003CCCAD /* SushiNekoTests */,
 				E7462CEB1D22D97F003CCCAD /* SushiNekoUITests */,
@@ -317,6 +320,7 @@
 			files = (
 				E7462CCB1D22D97F003CCCAD /* GameScene.sks in Resources */,
 				E7462CFE1D22D9C6003CCCAD /* sfx_swipe.caf in Resources */,
+				E7462D421D22E98B003CCCAD /* AnimationActions.sks in Resources */,
 				E7462CD71D22D97F003CCCAD /* LaunchScreen.storyboard in Resources */,
 				E7462CD41D22D97F003CCCAD /* Assets.xcassets in Resources */,
 				E7462CFB1D22D9AB003CCCAD /* assets.atlas in Resources */,
